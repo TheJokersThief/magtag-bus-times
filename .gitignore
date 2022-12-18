@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Project specific
-secrets.py
 .vscode
+.env
