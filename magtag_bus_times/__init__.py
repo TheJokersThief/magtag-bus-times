@@ -56,6 +56,7 @@ def run(ui: UI):
         data = response.json()
         response.close()
         scheduled = [Trip(**trip) for trip in data["upcoming"]][:MAX_TRIPS]
+        ui.current_time_banner(data["current_timestamp"])
 
         for index, item in enumerate(scheduled):
             ui.add_bus_time_item(
