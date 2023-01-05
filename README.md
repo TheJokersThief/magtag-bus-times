@@ -1,7 +1,13 @@
 # magtag-bus-times
 An IoT device for showing upcoming bus times
 
-Dependencies:
+# Hardware
+
+* [Magtag](https://www.adafruit.com/magtag)
+* A lithium ion battery of your choice
+
+# Prerequisites 
+
 * CircuitPython 7.X
 * A running server of https://github.com/TheJokersThief/gtfs-upcoming/
 
