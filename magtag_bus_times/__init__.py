@@ -36,9 +36,12 @@ MAGTAG = MagTag()
 
 def connect_to_wifi() -> None:
     """Connect to the wifi"""
-    print(f"Connecting to {secrets['ssid']}")
-    wifi.radio.connect(secrets["ssid"], secrets["password"])
-    print(f"Connected to {secrets['ssid']}!")
+    try:
+        print(f"Connecting to {secrets['ssid']}")
+        wifi.radio.connect(secrets["ssid"], secrets["password"])
+        print(f"Connected to {secrets['ssid']}!")
+    except:
+        MAGTAG.exit_and_deep_sleep(5)
 
 
 def init_request_pool() -> None:
@@ -64,7 +67,7 @@ def run(ui: UI):
             )
         ui.render()
     except Exception as e:
-        print("Error:\n", str(e))
+        MAGTAG.exit_and_deep_sleep(5)
 
 
 def main():

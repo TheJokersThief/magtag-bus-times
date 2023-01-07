@@ -10,8 +10,8 @@ ensure-poetry: ## Check if poetry is available
 	fi
 
 autoformat: ensure-poetry ## Autoformat files using isort and black
-	poetry run isort confluence2md/
-	poetry run black confluence2md/
+	poetry run isort magtag_bus_times/
+	poetry run black magtag_bus_times/
 
 lint: autoformat ## Lint and auto-format project with isort, black, and flake8
 
